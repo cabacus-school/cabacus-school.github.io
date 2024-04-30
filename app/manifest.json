@@ -1,6 +1,6 @@
 {
-    "name": "cabacus_flutter",
-    "short_name": "cabacus_flutter",
+    "name": "Cabacus",
+    "short_name": "Cabacus",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
