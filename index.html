@@ -7,13 +7,22 @@
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="stylesheet" src="css/styles.css" /> -->
     <link rel="icon" type="image/png" href="app/favicon.png" />
-    <!-- <link rel="canonical" href="https://cabacus.school" /> -->
+    <link rel="canonical" href="https://cabacus.school/" />
+    <style>
+        .cabacus-app {
+            display: none;
+        }
+
+        @media (min-width: 500px) and (min-height: 360px) {
+            .cabacus-app {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- <h1>Cabacus School</h1> -->
-    <!-- <script defer src="scripts/lightswitch.js"></script>-->
-    <iframe src="app/" width="100%" height="360px"></iframe>
+    <iframe class="cabacus-app" src="app/" width="100%" height="360px" loading="lazy"></iframe>
 </body>
 
 </html>
