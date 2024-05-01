@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-<!--  <base href="/">-->
+      This is a placeholder for base href that will be replaced by the value of
+      the `--base-href` argument provided to `flutter build`.
+    -->
+  <!--  <base href="/">-->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -27,33 +28,114 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Cabacus</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3358870201";
+    const serviceWorkerVersion = "665758477";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+    html {
+      font-family: "Gaegu";
+      background-color: rgb(237, 225, 207);
+      color: rgb(120, 89, 0);
+    }
+
+    .loading {
+      font-size: 500%;
+      font-weight: bold;
+      text-align: center;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .loading span {
+      display: inline-block;
+      animation: jump 2s infinite;
+      animation-delay: 0s;
+    }
+
+    .loading span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .loading span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .loading span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .loading span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    .loading span:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    .loading span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+
+      5% {
+        transform: translateY(-10%);
+      }
+
+      10% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div id="loading" class="loading">
+    <span>C</span>
+    <span>A</span>
+    <span>B</span>
+    <span>A</span>
+    <span>C</span>
+    <span>U</span>
+    <span>S</span>
+  </div>
   <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
+    window.addEventListener('load', function (ev) {
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
+        onEntrypointLoaded: async function (engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine();
+
+          await appRunner.runApp();
         }
       });
     });
   </script>
 </body>
+
 </html>
