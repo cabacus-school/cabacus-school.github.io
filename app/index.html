@@ -35,23 +35,30 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "665758477";
+    const serviceWorkerVersion = "1122802615";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
-
+<!--  Gaegu Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
-
     html {
-      font-family: "Gaegu";
-      background-color: rgb(237, 225, 207);
-      color: rgb(120, 89, 0);
+      background: repeating-linear-gradient(to right,
+                    #ede1cf, 5rem,
+                    #e1e4d6 5rem, #e1e4d6 10rem,
+                    #dae5e3 10rem, #dae5e3 15rem,
+                    #dde3eb 15rem, #dde3eb 20rem,
+                    #ecdfe8 20rem, #ecdfe8 25rem,
+                    #f5ddda 25rem, #f5ddda 30rem);
+      color: black;
     }
 
     .loading {
-      font-size: 500%;
-      font-weight: bold;
+      font-family: "Gaegu";
+      font-weight: 700;
+      font-size: larger;
       text-align: center;
       height: 200px;
       position: absolute;
@@ -113,7 +120,7 @@
 </head>
 
 <body>
-  <div id="loading" class="loading">
+  <h1 id="loading" class="loading">
     <span>C</span>
     <span>A</span>
     <span>B</span>
@@ -121,7 +128,7 @@
     <span>C</span>
     <span>U</span>
     <span>S</span>
-  </div>
+  </h1>
   <script>
     window.addEventListener('load', function (ev) {
       _flutter.loader.loadEntrypoint({
