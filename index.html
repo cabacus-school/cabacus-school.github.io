@@ -5,26 +5,54 @@
     <!-- Fonts from Google: Montserrat, Gaegu, Courier Prime -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <!-- With Courier Prime -->
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Gaegu:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> -->
+    <!-- Without Courier Prime -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <meta charset="utf-8" />
-    <title>Cabacus School</title>
+    <title>Cabacus</title>
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="stylesheet" href="css/preflight.css" /> -->
     <link rel="icon" type="image/png" href="app/favicon.png" />
     <link rel="canonical" href="https://cabacus.school/" />
     <style>
+        /* select,
         textarea,
-        input {
+        input,
+        button {
             font: inherit;
             letter-spacing: inherit;
             word-spacing: inherit;
+        } */
+
+        h1,
+        p,
+        body,
+        header,
+        hr {
+            margin: 0;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: repeating-linear-gradient(to right,
+                    #ffc109, 5rem,
+                    #8cc44d 5rem, #8cc44d 10rem,
+                    #54b0ae 10rem, #54b0ae 15rem,
+                    #1560bd 15rem, #1560bd 20rem,
+                    #e040fb 20rem, #e040fb 25rem,
+                    #ff3ea5 25rem, #ff3ea5 30rem);
         }
 
         html {
             background-color: #ede1cf;
+            font-size: larger;
             font-family: 'Montserrat', sans-serif;
             font-optical-sizing: auto;
             background: repeating-linear-gradient(to right,
@@ -34,34 +62,31 @@
                     #dde3eb 15rem, #dde3eb 20rem,
                     #ecdfe8 20rem, #ecdfe8 25rem,
                     #f5ddda 25rem, #f5ddda 30rem);
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: 0;
         }
 
-        .cabacus-app {
+        .min-size-display {
             display: none;
         }
 
-        @media (min-width: 500px) and (min-height: 360px) {
-            .cabacus-app {
-                border: 1px solid #ccc;
-                border-radius: 1rem;
-                overflow: hidden;
-                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        .horiz-margins {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        @media (min-width: 500px) {
+            .min-size-display {
                 display: block;
-                width: 100%;
-                height: 360px;
-                outline: 1px solid black;
             }
         }
 
-        .cabacus {
+        .cabacus-logo {
             font-family: "Gaegu", sans-serif;
             font-weight: 700;
-            color: #785900;
+            color: black;
         }
 
-        .courier-prime-regular {
+        /* .courier-prime-regular {
             font-family: "Courier Prime", monospace;
             font-weight: 400;
             font-style: normal;
@@ -83,15 +108,38 @@
             font-family: "Courier Prime", monospace;
             font-weight: 700;
             font-style: italic;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <h1 class="cabacus">CABACUS</h1>
-    <h2>Download</h2>
-    <iframe class="cabacus-app" src="app/" loading="lazy"></iframe>
-    <!-- <h1>Cabacus</h1> -->
+    <header style="background-color: rgba(255, 255, 255, 0.5); padding: .5rem 0;">
+        <h1 class="cabacus-logo horiz-margins">
+            <a href="./" style="color: inherit; text-decoration: none;">CABACUS</a>
+        </h1>
+    </header>
+    <hr>
+    <br>
+    <div class="horiz-margins">
+        <div style="background-color: rgba(255, 255, 255, 0.5); padding: 1rem; border-radius: 1rem;">
+            <div class="row" style="display: flex; flex-direction: row;">
+                <image aria-label="Cabacus App Icon"
+                    style="border-radius: 22.5%; outline: 1px solid gray; width: 256px;"
+                    src="assets/images/app_icon.png" alt="Cabacus App Icon">
+                </image>
+                <p>Download here</p>
+            </div>
+            <p class="min-size-display" style="text-align: center;">
+                Or try it here! Just tap a bead. Tap <span style="font-family: 'Gaegu';">CABACUS</span> to set all
+                zero.
+            </p>
+        </div>
+        <iframe aria-label="Cabacus Web App" class="min-size-display" src="app/" loading="lazy" width="100%"
+            height="360px" style="border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;"></iframe>
+    </div>
 </body>
 
 </html>
