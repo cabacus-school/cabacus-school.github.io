@@ -35,32 +35,37 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2180687815";
+    const serviceWorkerVersion = "4137443416";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
-<!--  Gaegu Font-->
+  <!--  Gaegu Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
   <style>
     html {
       background: repeating-linear-gradient(to right,
-                    #ede1cf, 5rem,
-                    #e1e4d6 5rem, #e1e4d6 10rem,
-                    #dae5e3 10rem, #dae5e3 15rem,
-                    #dde3eb 15rem, #dde3eb 20rem,
-                    #ecdfe8 20rem, #ecdfe8 25rem,
-                    #f5ddda 25rem, #f5ddda 30rem);
-      color: black;
+          #ede1cf, 8.3%,
+          #e1e4d6 8.3%, #e1e4d6 16.7%,
+          #dae5e3 16.7%, #dae5e3 25%,
+          #dde3eb 25%, #dde3eb 33.3%,
+          #ecdfe8 33.3%, #ecdfe8 41.7%,
+          #f5ddda 41.7%, #f5ddda 50%);
     }
 
     .loading {
       font-family: "Gaegu";
       font-weight: 700;
-      font-size: x-large;
+      font-size: xx-large;
       text-align: center;
-      height: 200px;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #5F584E;
+      height: min-content;
+      width: fit-content;
+      padding: .2em .4em;
+      border-radius: .2em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, .1);
       position: absolute;
       top: 0;
       bottom: 0;
@@ -121,13 +126,7 @@
 
 <body>
   <h1 id="loading" class="loading">
-    <span>C</span>
-    <span>A</span>
-    <span>B</span>
-    <span>A</span>
-    <span>C</span>
-    <span>U</span>
-    <span>S</span>
+    <span>C</span><span>A</span><span>B</span><span>A</span><span>C</span><span>U</span><span>S</span>
   </h1>
   <script>
     window.addEventListener('load', function (ev) {
