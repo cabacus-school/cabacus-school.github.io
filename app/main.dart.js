@@ -36340,10 +36340,9 @@ p=A.ajc(s==null?p.cy:s,0)
 return A.hX(r,A.p4(B.iA,A.a([new A.bn(new A.a50(this,a),r,r,t.Ki),this.c],t.p),B.bd,B.bP),B.bd,r,new A.dq(q,r,p,r,r,r,B.aA),r,r,r,r)}}
 A.a50.prototype={
 $3(a,b,c){var s,r=null,q=b.gl().d,p=this.b
-if(B.d.a9(this.a.d,3)===0){p=A.a0(p).ay
+if(B.d.a9(this.a.d,3)===0)p=A.a0(p).ay.cx
+else{p=A.a0(p).ay
 s=p.fr
-p=s==null?p.cx:s}else{p=A.a0(p).ay
-s=p.fx
 p=s==null?p.cx:s}return A.hX(r,r,B.D,r,new A.dq(p,r,r,r,r,r,B.aA),r,r,r,q)},
 $C:"$3",
 $R:3,
