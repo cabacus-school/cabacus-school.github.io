@@ -1,0 +1,149 @@
+body,
+header,
+article,
+hr {
+    margin: 0;
+}
+
+p,
+h1,
+h2 {
+    margin: .2em 0;
+}
+
+small {
+    display: block;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 125%;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: repeating-linear-gradient(to right,
+            #ffc109, 8.3%,
+            #8cc44d 8.3%, #8cc44d 16.7%,
+            #54b0ae 16.7%, #54b0ae 25%,
+            #1560bd 25%, #1560bd 33.3%,
+            #e040fb 33.3%, #e040fb 41.7%,
+            #ff3ea5 41.7%, #ff3ea5 50%);
+}
+
+p {
+    text-align: justify;
+}
+
+html {
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    background: repeating-linear-gradient(to right,
+            #ede1cf, 8.3%,
+            #e1e4d6 8.3%, #e1e4d6 16.7%,
+            #dae5e3 16.7%, #dae5e3 25%,
+            #dde3eb 25%, #dde3eb 33.3%,
+            #ecdfe8 33.3%, #ecdfe8 41.7%,
+            #f5ddda 41.7%, #f5ddda 50%);
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+}
+
+header {
+    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.header-text {
+    padding: .2em 1em;
+    background-color: white;
+}
+
+article {
+    max-width: 80ch;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, .8);
+    padding: 2em 4em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+footer {
+    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.footer-text {
+    background-color: white;
+    height: 100%;
+    padding: 2em 1em;
+}
+
+.cabacus-logo {
+    font-family: "Gaegu", sans-serif;
+    font-weight: 700;
+    color: #5F584E;
+}
+
+.desktop-block {
+    display: block;
+}
+
+.desktop-inline {
+    display: inline;
+}
+
+.mobile-block,
+.mobile-inline {
+    display: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+img {
+    object-fit: scale-down;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: large;
+    }
+
+    .desktop-block,
+    .desktop-inline {
+        display: none;
+    }
+
+    .mobile-block {
+        display: block;
+    }
+
+    .mobile-inline {
+        display: inline;
+    }
+
+    article {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

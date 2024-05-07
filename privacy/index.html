@@ -20,147 +20,24 @@
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <link rel="canonical" href="https://cabacus.school/" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <style>
-        p,
-        body,
-        header,
-        hr,
-        h1,
-        h2 {
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 200%;
-        }
-
-        h2 {
-            font-size: 125%;
-        }
-
-        hr {
-            border: 0;
-            height: 2px;
-            background: repeating-linear-gradient(to right,
-                    #ffc109, 8.3%,
-                    #8cc44d 8.3%, #8cc44d 16.7%,
-                    #54b0ae 16.7%, #54b0ae 25%,
-                    #1560bd 25%, #1560bd 33.3%,
-                    #e040fb 33.3%, #e040fb 41.7%,
-                    #ff3ea5 41.7%, #ff3ea5 50%);
-        }
-
-        html {
-            background-color: #ede1cf;
-            font-size: x-large;
-            font-family: 'Montserrat', sans-serif;
-            font-optical-sizing: auto;
-            background: repeating-linear-gradient(to right,
-                    #ede1cf, 8.3%,
-                    #e1e4d6 8.3%, #e1e4d6 16.7%,
-                    #dae5e3 16.7%, #dae5e3 25%,
-                    #dde3eb 25%, #dde3eb 33.3%,
-                    #ecdfe8 33.3%, #ecdfe8 41.7%,
-                    #f5ddda 41.7%, #f5ddda 50%);
-            padding: 0;
-        }
-
-        .hide-on-mobile {
-            display: block;
-        }
-
-        .show-on-mobile {
-            display: none;
-        }
-
-        .horiz-margins {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        article {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 1em;
-            align-items: center;
-        }
-
-        .cabacus-logo {
-            font-family: "Gaegu", sans-serif;
-            font-weight: 700;
-            color: #5F584E;
-        }
-
-        .box-shadow {
-            box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
-        }
-
-        .translucent-white {
-            background-color: rgba(255, 255, 255, .8);
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        img {
-            object-fit: scale-down;
-        }
-
-        section {
-            max-width: 80ch;
-            box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, .8);
-            padding: 2em 2em;
-            border-radius: 1em;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 1em;
-        }
-
-        @media (max-width: 700px) {
-            html {
-                font-size: large;
-            }
-
-            .hide-on-mobile {
-                display: none;
-            }
-
-            .show-on-mobile {
-                display: inherit;
-            }
-
-            .horiz-margins {
-                margin-left: .5em;
-                margin-right: .5em;
-            }
-
-            section {
-                padding-left: .5em;
-                padding-right: .5em;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="/css/common.css" />
 </head>
 
 <body>
-    <header class="box-shadow" style="position: sticky; top: 0; z-index: 999; margin-bottom: 1em;">
-        <div style="padding: .2em 0; background-color: white;">
-            <div class="cabacus-logo horiz-margins">
+    <header>
+        <div class="header-text">
+            <div class="cabacus-logo">
                 <a href="/"
                     style="color: inherit; text-decoration: none; display: flex; flex-direction: row; gap: .5em;">
                     <img alt="Cabacus Icon" src="/favicon.svg" width="48" height="48"
                         style="vertical-align: middle; display: inline;">
-                    <span class="hide-on-mobile" style="vertical-align: middle; font-size: xx-large;">
+                    <span class="desktop-inline" style="vertical-align: middle; font-size: xx-large;">
                         CABACUS.SCHOOL
                     </span>
-                    <div style="vertical-align: middle; font-size: medium; line-height: normal; margin: auto 0;">
-                        <div class="show-on-mobile">CABACUS</div>
-                        <div class="show-on-mobile">.SCHOOL</div>
+                    <div class="mobile-inline"
+                        style="vertical-align: middle; font-size: medium; line-height: normal; margin: auto 0;">
+                        <div>CABACUS</div>
+                        <div>.SCHOOL</div>
                     </div>
                 </a>
             </div>
@@ -170,7 +47,7 @@
     <article>
         <section>
             <h1>Privacy Policy for Cabacus</h1>
-            <p><strong>Effective Date: 29 April 2024</strong></p>
+            <small><i>Effective Date: 29 April 2024</i></small>
 
             <p>This Privacy Policy governs the privacy practices of the Cabacus mobile application ("Cabacus" or the
                 "application") developed by Cabacus School ("we," "us," or "our"). We are committed to protecting the
@@ -229,29 +106,24 @@
         <section>
             <h2>Contact Us</h2>
             <p>If you have any questions or concerns about this Privacy Policy or Cabacus' privacy practices, please
-                contact
-                us
-                at <a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a>.</p>
-
+                contact us at <a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a>.</p>
+        </section>
+        <section>
             <p>By using Cabacus, you acknowledge that you have read and understood this Privacy Policy.</p>
-
-            <p>This Privacy Policy was last updated on 29 April 2024.</p>
-
-            <p>Cabacus School<br>
-                Ang Mo Kio Avenue 8, Singapore 560507</p>
+        </section>
+        <section>
+            <small>This Privacy Policy was last updated on 29 April 2024.</small>
+            <small>Cabacus School</small>
+            <small> Ang Mo Kio Avenue 8, Singapore 560507</small>
         </section>
     </article>
-    <footer class="box-shadow" style="margin-top: 1em;">
+    <footer>
         <hr>
-        <div style="background-color: white; height: 100%;">
-            <div class="horiz-margins" style="padding: 2em 0;">
-                <div style="font-size: medium;">
-                    <p>Cabacus School © 2024</p>
-                    <p><a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a></p>
-                    <p><a href="/privacy/">Privacy Policy</a></p>
-                    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
-                </div>
-            </div>
+        <div class="footer-text">
+            <small>Cabacus School © 2024</small>
+            <small><a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a></small>
+            <small><a href="/privacy/">Privacy Policy</a></small>
+            <small>Google Play and the Google Play logo are trademarks of Google LLC.</small>
         </div>
     </footer>
 </body>
