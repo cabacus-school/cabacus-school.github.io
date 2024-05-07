@@ -21,88 +21,8 @@
     <link rel="icon" type="image/svg" href="favicon.svg" />
     <link rel="canonical" href="https://cabacus.school/" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <style>
-        p,
-        body,
-        header,
-        hr {
-            margin: 0;
-        }
-
-        hr {
-            border: 0;
-            height: 2px;
-            background: repeating-linear-gradient(to right,
-                    #ffc109, 8.3%,
-                    #8cc44d 8.3%, #8cc44d 16.7%,
-                    #54b0ae 16.7%, #54b0ae 25%,
-                    #1560bd 25%, #1560bd 33.3%,
-                    #e040fb 33.3%, #e040fb 41.7%,
-                    #ff3ea5 41.7%, #ff3ea5 50%);
-        }
-
-        html {
-            background-color: #ede1cf;
-            font-size: x-large;
-            font-family: 'Montserrat', sans-serif;
-            font-optical-sizing: auto;
-            background: repeating-linear-gradient(to right,
-                    #ede1cf, 8.3%,
-                    #e1e4d6 8.3%, #e1e4d6 16.7%,
-                    #dae5e3 16.7%, #dae5e3 25%,
-                    #dde3eb 25%, #dde3eb 33.3%,
-                    #ecdfe8 33.3%, #ecdfe8 41.7%,
-                    #f5ddda 41.7%, #f5ddda 50%);
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 1em;
-        }
-
-        .numeric {
-            font-family: "Courier Prime", monospace;
-            font-weight: 400;
-        }
-
-        .hide-on-mobile {
-            display: block;
-        }
-
-        .show-on-mobile {
-            display: none;
-        }
-
-        .horiz-margins {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        .cabacus-logo {
-            font-family: "Gaegu", sans-serif;
-            font-weight: 700;
-            color: #5F584E;
-        }
-
-        .box-shadow {
-            box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
-        }
-
-        .translucent-white {
-            background-color: rgba(255, 255, 255, .8);
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        img {
-            object-fit: scale-down;
-        }
-
         #app-icon {
             border-radius: 22.5%;
             outline: 1px solid gray;
@@ -110,96 +30,70 @@
             max-height: 256px;
         }
 
-        section {
-
-            width: 100%;
-            box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, .8);
-        }
-
-        .section-padding {
-            padding: 2em 2em;
+        .cabacus-web-app {
+            border: 1px solid gray;
+            border-radius: 1em;
+            width: 98%;
         }
 
         @media (max-width: 700px) {
-            html {
-                font-size: large;
-            }
-
-            .hide-on-mobile {
-                display: none;
-            }
-
-            .show-on-mobile {
-                display: inherit;
-            }
-
-            .horiz-margins {
-                margin-left: .5em;
-                margin-right: .5em;
-            }
-
             #app-icon {
                 max-width: 128px;
                 max-height: 128px;
-            }
-
-            .section-padding {
-                padding-left: .5em;
-                padding-right: .5em;
             }
         }
     </style>
 </head>
 
 <body>
-    <header class="box-shadow" style="position: sticky; top: 0; z-index: 999">
-        <div style="padding: .2em 0; background-color: white;">
-            <div class="cabacus-logo horiz-margins">
-                <a href="./"
+    <header>
+        <div class="header-text">
+            <div class="cabacus-logo">
+                <a href="/"
                     style="color: inherit; text-decoration: none; display: flex; flex-direction: row; gap: .5em;">
-                    <img alt="Cabacus Icon" src="favicon.svg" width="48" height="48"
+                    <img alt="Cabacus Icon" src="/favicon.svg" width="48" height="48"
                         style="vertical-align: middle; display: inline;">
-                    <span class="hide-on-mobile" style="vertical-align: middle; font-size: xx-large;">
+                    <span class="desktop-inline" style="vertical-align: middle; font-size: xx-large;">
                         CABACUS.SCHOOL
                     </span>
-                    <div style="vertical-align: middle; font-size: medium; line-height: normal; margin: auto 0;">
-                        <div class="show-on-mobile">CABACUS</div>
-                        <div class="show-on-mobile">.SCHOOL</div>
+                    <div class="mobile-inline"
+                        style="vertical-align: middle; font-size: medium; line-height: normal; margin: auto 0;">
+                        <div>CABACUS</div>
+                        <div>.SCHOOL</div>
                     </div>
                 </a>
             </div>
         </div>
         <hr>
     </header>
-    <section class="section-padding"
-        style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 2em;">
+    <article
+        style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 2em; align-items: center;">
         <img id="app-icon" src="assets/images/app_icon.svg" alt="Cabacus App Icon">
         <div style="display: flex; flex-direction: column; align-items: start; justify-content: space-between;">
-            <p>Learn mathematics through <b><i>play</i></b> and <b><i>practice</i></b>!</p>
-            <p>The best way to learn numbers through <b><i>visualization</i></b>.</p>
+            <h1>Cabacus</h1>
+            <p>
+                <i><b>Learn mathematics</b> through <br>
+                    <b>visualization</b>, <b>play</b> and <b>practice</b></i>!
+            </p>
             <div>
-                <i style="font-size: 80%;">Coming soon:</i>
+                <small><i>Coming soon:</i></small>
                 <img id="google-play-badge" src="assets/images/google-play-badge.png" alt="Get it on Google Play"
                     style="max-height: 80px; display: inline; vertical-align: middle; filter: blur(4px);">
             </div>
-            <p class="hide-on-mobile" style="text-align: center;">
-                Or try it below! Just tap a bead. Tap <span
-                    style="font-family: 'Gaegu'; font-size: xx-large; display: inline;">CABACUS</span>
-                to set zero.
+            <p class="desktop-block" style="text-align: center;">
+                Or try it below! Just tap a bead. Tap <span class="cabacus-font"
+                    style="font-size: xx-large;">CABACUS</span> to set zero.
             </p>
         </div>
-    </section>
-    <div class="horiz-margins">
-        <iframe aria-label="Cabacus Web App" class="hide-on-mobile box-shadow" src="app/" loading="lazy" width="100%"
-            height="380px" style="border: 1px solid gray; border-radius: 1em;"></iframe>
-        <img class="show-on-mobile box-shadow" style="width: 100%; border: 1px solid gray; border-radius: .5em;"
-            src="assets/images/s1_amber.png" alt="Screenshot of Cabacus app">
-    </div>
-    <section
-        style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; height: min-content; vertical-align: middle;">
-        <div style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; padding: 2em 0;">
-            <p>Coming soon!</p>
+    </article>
+    <iframe aria-label="Cabacus Web App" class="desktop-block box-shadow cabacus-web-app" src="app/" loading="lazy"
+        height="380px"></iframe>
+    <img class="mobile-block box-shadow cabacus-web-app" src="/assets/images/s1_amber.png"
+        alt="Screenshot of Cabacus app">
+    <article
+        style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; height: min-content; align-items: center;">
+        <div style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center;">
+            <h1>Coming soon!</h1>
             <ul>
                 <li><b>Arithmetic Games</b></li>
                 <p class="numeric">123 + 456 + 789 = ????</p>
@@ -208,20 +102,19 @@
                 <li><b>More Colors</b></li>
             </ul>
         </div>
-        <img src="assets/images/child_blackboard_arithmetic.jpeg" alt="Child doing arithmetic"
-            style="max-height: 384px;">
-    </section>
-    <footer class="box-shadow">
+        <img src="assets/images/child_blackboard_arithmetic.jpeg" alt="Child doing arithmetic" height="384px"
+            class="box-shadow" style="border-radius: 1em;">
+    </article>
+    <footer>
         <hr>
-        <div style="background-color: white; height: 100%;">
-            <div class="horiz-margins" style="padding: 2em 0;">
-                <div style="font-size: medium;">
-                    <p>Cabacus School © 2024</p>
-                    <p><a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a></p>
-                    <p><a href="privacy/">Privacy Policy</a></p>
-                    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
-                </div>
-            </div>
+        <div class="footer-text">
+            <small>Cabacus School © 2024</small>
+            <br>
+            <small><a href="mailto: cabacus.school@gmail.com">cabacus.school@gmail.com</a></small>
+            <br>
+            <small><a href="/privacy/">Privacy Policy</a></small>
+            <br>
+            <small>Google Play and the Google Play logo are trademarks of Google LLC.</small>
         </div>
     </footer>
 </body>

@@ -11,10 +11,6 @@ h2 {
     margin: .2em 0;
 }
 
-small {
-    display: block;
-}
-
 h1 {
     font-size: 200%;
 }
@@ -33,6 +29,11 @@ hr {
             #1560bd 25%, #1560bd 33.3%,
             #e040fb 33.3%, #e040fb 41.7%,
             #ff3ea5 41.7%, #ff3ea5 50%);
+}
+
+.numeric {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
 }
 
 p {
@@ -61,12 +62,27 @@ body {
     align-items: center;
 }
 
-header {
+body>*:not(header):not(footer) {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+header,
+article,
+footer,
+.box-shadow {
     box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+header {
     position: sticky;
     top: 0;
     z-index: 999;
-    width: 100%;
 }
 
 .header-text {
@@ -74,9 +90,15 @@ header {
     background-color: white;
 }
 
+.footer-text {
+    padding: 2em 1em;
+    background-color: white;
+    height: 100%;
+}
+
 article {
     max-width: 80ch;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+    width: 100%;
     background-color: rgba(255, 255, 255, .8);
     padding: 2em 4em;
     border-radius: 1em;
@@ -86,20 +108,14 @@ article {
     gap: 1em;
 }
 
-footer {
-    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-.footer-text {
-    background-color: white;
-    height: 100%;
-    padding: 2em 1em;
-}
-
+.cabacus-font,
 .cabacus-logo {
     font-family: "Gaegu", sans-serif;
     font-weight: 700;
+    display: inline;
+}
+
+.cabacus-logo {
     color: #5F584E;
 }
 
@@ -145,5 +161,10 @@ img {
     article {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    body>*:not(header):not(footer) {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
