@@ -36864,7 +36864,8 @@ case 2:if(!(o<p.gt(p))){s=4
 break}p.hf()
 n=p.gbd().j(0,o).e
 n===$&&A.c()
-m=n<5?0:1
+if(n===0){s=3
+break}m=n<5?0:1
 A.aiq(m+(B.c.aa(n,5)>0?1:0))
 p.hf()
 p.gbd().j(0,o).hi(0,!1)
