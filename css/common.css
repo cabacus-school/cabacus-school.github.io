@@ -52,6 +52,23 @@ html {
             #ecdfe8 33.3%, #ecdfe8 41.7%,
             #f5ddda 41.7%, #f5ddda 50%);
     padding: 0;
+
+}
+
+hr,
+html {
+    background-size: 200% auto;
+    animation: slide 60s reverse linear infinite;
+}
+
+@keyframes slide {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
 }
 
 body {
