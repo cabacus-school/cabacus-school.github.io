@@ -35,7 +35,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "887528497";
+    const serviceWorkerVersion = "3537301938";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -46,12 +46,25 @@
   <style>
     html {
       background: repeating-linear-gradient(to right,
-          #ede1cf, 8.3%,
-          #e1e4d6 8.3%, #e1e4d6 16.7%,
-          #dae5e3 16.7%, #dae5e3 25%,
-          #dde3eb 25%, #dde3eb 33.3%,
-          #ecdfe8 33.3%, #ecdfe8 41.7%,
-          #f5ddda 41.7%, #f5ddda 50%);
+          #ede1cf, 7.1%,
+          #e1e4d6 7.1%, #e1e4d6 14.3%,
+          #d3e5f5 14.3%, #d3e5f5 21.4%,
+          #ecdfe8 21.4%, #ecdfe8 28.6%,
+          #ffd9e5 28.6%, #ffd9e5 35.7%,
+          #ffdad5 35.7%, #ffdad5 42.9%,
+          #ffddbe 42.9%, #ffddbe 50%);
+      background-size: 200% auto;
+      animation: slide 120s reverse linear infinite;
+    }
+
+    @keyframes slide {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 100% 0;
+      }
     }
 
     .loading {
