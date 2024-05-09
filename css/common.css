@@ -23,12 +23,13 @@ hr {
     border: 0;
     height: 2px;
     background: repeating-linear-gradient(to right,
-            #ffc109, 8.3%,
-            #8cc44d 8.3%, #8cc44d 16.7%,
-            #54b0ae 16.7%, #54b0ae 25%,
-            #1560bd 25%, #1560bd 33.3%,
-            #e040fb 33.3%, #e040fb 41.7%,
-            #ff3ea5 41.7%, #ff3ea5 50%);
+            #ffc109, 7.1%,
+            #8cc44d 7.1%, #8cc44d 14.3%,
+            #04abf4 14.3%, #04abf4 21.4%,
+            #e040fb 21.4%, #e040fb 28.6%,
+            #ff44a7 28.6%, #ff44a7 35.7%,
+            #f44336 35.7%, #f44336 42.9%,
+            #ff9800 42.9%, #ff9800 50%);
 }
 
 .numeric {
@@ -45,14 +46,14 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     background: repeating-linear-gradient(to right,
-            #ede1cf, 8.3%,
-            #e1e4d6 8.3%, #e1e4d6 16.7%,
-            #dae5e3 16.7%, #dae5e3 25%,
-            #dde3eb 25%, #dde3eb 33.3%,
-            #ecdfe8 33.3%, #ecdfe8 41.7%,
-            #f5ddda 41.7%, #f5ddda 50%);
+            #ede1cf, 7.1%,
+            #e1e4d6 7.1%, #e1e4d6 14.3%,
+            #d3e5f5 14.3%, #d3e5f5 21.4%,
+            #ecdfe8 21.4%, #ecdfe8 28.6%,
+            #ffd9e5 28.6%, #ffd9e5 35.7%,
+            #ffdad5 35.7%, #ffdad5 42.9%,
+            #ffddbe 42.9%, #ffddbe 50%);
     padding: 0;
-
 }
 
 hr,
