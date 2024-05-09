@@ -58,7 +58,7 @@ html {
 hr,
 html {
     background-size: 200% auto;
-    animation: slide 60s reverse linear infinite;
+    animation: slide 120s reverse linear infinite;
 }
 
 @keyframes slide {
